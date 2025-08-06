@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "build:css": "tailwindcss-cli -i ./app/public/static/css/input.css -o ./app/public/static/css/output.css --minify",
+  "watch:css": "tailwindcss-cli -i ./app/public/static/css/input.css -o ./app/public/static/css/output.css --watch",
+  "init:css": "tailwindcss-cli init"
+},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yhupe/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yhupe/portfolio/issues"
+  },
+  "homepage": "https://github.com/yhupe/portfolio#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.11",
+    "tailwindcss-cli": "^0.1.2"
+  }
+}
