@@ -1,3 +1,20 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Tailwind v4: Basis laden */
+@import "tailwindcss";
+
+/* Dein Theme (Design-Tokens) – v4 macht das in CSS, nicht in der JS-Config */
+@theme {
+  --color-ink-900: #0b0d10;
+  --color-ink-800: #12161b;
+
+  --color-paper-100: #e6e9ef;
+  --color-paper-50:  #f2f4f8;
+
+  --color-accent-mint:  #9be7c4;
+  --color-accent-peach: #ffc6a5;
+  --color-accent-sky:   #9cc9ff;
+  --color-accent-lilac: #c7b7ff;
+}
+
+/* (Optional) eigene Variant für class-basierten Dark-Mode – falls du dark: nutzen willst */
+@custom-variant dark (&:where(.dark *));
+
