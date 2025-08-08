@@ -1,2 +1,58 @@
 {% extends "base.html" %}
 {% block title %}Welcome!{% endblock %}
+
+{% block content %}
+<section id="hero" class="grid md:grid-cols-2 gap-8 items-center">
+  <div>
+    <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
+      Building a <span class="text-accent-peach">thoughtful</span>,<br/>
+      <span class="text-accent-mint">elegant</span> portfolio with<br/>
+      subtle <span class="text-accent-sky">motion</span>.
+    </h1>
+    <p class="mt-4 text-white/70 max-w-prose">
+      Not boring white. Soft blacks, softened whites, and smart micro-interactions.
+    </p>
+    <div class="mt-8 flex gap-3">
+      <a href="/projects" class="px-4 py-2 rounded bg-white/10 hover:bg-white/15 border border-white/10">View Projects</a>
+      <a href="/cv" class="px-4 py-2 rounded bg-accent-mint/20 hover:bg-accent-mint/30 border border-accent-mint/40">Download CV</a>
+    </div>
+  </div>
+  <div class="h-64 md:h-80 rounded-xl bg-ink-800 border border-white/5 shadow-soft" id="heroCard"></div>
+</section>
+
+<section class="mt-24 space-y-4" id="features">
+  <h2 class="text-2xl font-medium">Highlights</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="h-32 rounded-lg bg-ink-800 border border-white/10 shadow-soft feature-card">hihi</div>
+    <div class="h-32 rounded-lg bg-ink-800 border border-white/10 shadow-soft feature-card"></div>
+    <div class="h-32 rounded-lg bg-ink-800 border border-white/10 shadow-soft feature-card"></div>
+  </div>
+</section>
+
+<section class="mt-24" id="projectsTeaser">
+  <h2 class="text-2xl font-medium mb-6">Projects</h2>
+  <!-- später Cards/Liste -->
+  <div class="h-32 rounded-lg bg-ink-800 border border-white/10 shadow-soft"></div>
+</section>
+{% endblock %}
+
+{% block scripts_extra %}
+<script>
+  window.addEventListener('load', () => {
+    if (!window.gsap) return;
+
+    // Hero Intro
+    gsap.from("#heroCard", { y: 30, opacity: 0, duration: 0.8, ease: "power2.out" });
+    gsap.from("#hero h1 span", { opacity: 0, y: 8, stagger: 0.08, duration: 0.5, ease: "power2.out", delay: 0.1 });
+
+    // Scroll-Reveals (ein gemeinsamer Trigger)
+    if (window.ScrollTrigger) {
+      const cards = gsap.utils.toArray(".feature-card");
+      gsap.from(cards, {
+        scrollTrigger: { trigger: "#features", start: "top 75%", once: true },
+        y: 20, opacity: 0, duration: 0.6, ease: "power2.out", stagger: 0.08
+      });
+    }
+  });
+</script>
+{% endblock %}
