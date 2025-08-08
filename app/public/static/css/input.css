@@ -1,3 +1,7 @@
+/* digital Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+
 @import "tailwindcss";
 
 /* 1) Sage Tailwind, wo es nach Klassen scannen soll */
@@ -24,4 +28,8 @@
   --color-accent-ashgrey:     #a9a9a9;
   --color-accent-magenta:     #ff00ff;
   --color-accent-lavenderblue:#6a5acd;
+
+
+  /* echte Monospace-Variante, „digital“ anmutend */
+  --font-countdown-mono: "Share Tech Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 }

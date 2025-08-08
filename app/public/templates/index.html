@@ -2,10 +2,10 @@
 {% block title %}Welcome!{% endblock %}
 
 {% block content %}
-<section id="hero" class="grid md:grid-cols-2 gap-8 items-stretch">
+<section id="hero" class="grid md:grid-cols-2 gap-8 items-start">
   <div>
     <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
-      Welcome! I am <span class="text-accent-peach">Hannes</span>.<br/>
+      Welcome - I am <span class="text-accent-peach">Hannes</span>.<br/>
       Follow my journey along an <span class="text-accent-mint">uncertain path</span>, searching to <br/>
       find <span class="text-[#A78BFA]">meaning</span> in what I do <br/>
       and strive to uncover the <span class="text-accent-sky">purpose</span> of my life.
@@ -14,19 +14,25 @@
       Not boring white. Soft blacks, softened whites, and smart micro-interactions.
     </p>
     <div class="mt-8 flex gap-3">
-      <a href="/projects" class="px-4 py-2 rounded bg-white/10 hover:bg-white/15 border border-white/10">View Projects</a>
-      <a href="/cv" class="px-4 py-2 rounded bg-accent-mint/20 hover:bg-accent-mint/30 border border-accent-mint/40">Download CV</a>
+      <a href="/projects" class="px-4 py-2 rounded bg-white/10 hover:bg-white/15 border border-white/10">my GitHub projects</a>
+      <a href="/blog" class="px-4 py-2 rounded bg-accent-mint/20 hover:bg-accent-mint/30 border border-accent-mint/40">read my blog</a>
     </div>
   </div>
 
   <!-- Image Container -->
-  <div class="h-full min-h-[20rem] rounded-xl border border-white/5 shadow-soft overflow-hidden">
-    <img src="/static/img/landing_page_hero.jpg"
-         alt="Hero picture of Hannes"
-         class="w-full h-full object-cover"/>
-  </div>
+  <div class="justify-self-start rounded-xl shadow-soft overflow-hidden max-w-[420px]">
+  <img src="/static/img/eisbaden.png"
+       alt="picture of Hannes"
+       class="block w-full h-auto object-cover"
+       style="
+         max-height: 30rem;
+         -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+                 mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+         -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat;
+         -webkit-mask-size: 100% 100%;  mask-size: 100% 100%;
+       ">
+</div>
 </section>
-
 
 <section class="mt-24 space-y-4" id="features">
   <h2 class="text-2xl font-medium">Highlights</h2>
