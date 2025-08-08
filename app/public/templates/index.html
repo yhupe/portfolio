@@ -2,12 +2,13 @@
 {% block title %}Welcome!{% endblock %}
 
 {% block content %}
-<section id="hero" class="grid md:grid-cols-2 gap-8 items-center">
+<section id="hero" class="grid md:grid-cols-2 gap-8 items-stretch">
   <div>
     <h1 class="text-4xl md:text-5xl font-semibold leading-tight">
-      Building a <span class="text-accent-peach">thoughtful</span>,<br/>
-      <span class="text-accent-mint">elegant</span> portfolio with<br/>
-      subtle <span class="text-accent-sky">motion</span>.
+      Welcome! I am <span class="text-accent-peach">Hannes</span>.<br/>
+      Follow my journey along an <span class="text-accent-mint">uncertain path</span>, searching to <br/>
+      find <span class="text-[#A78BFA]">meaning</span> in what I do <br/>
+      and strive to uncover the <span class="text-accent-sky">purpose</span> of my life.
     </h1>
     <p class="mt-4 text-white/70 max-w-prose">
       Not boring white. Soft blacks, softened whites, and smart micro-interactions.
@@ -17,8 +18,15 @@
       <a href="/cv" class="px-4 py-2 rounded bg-accent-mint/20 hover:bg-accent-mint/30 border border-accent-mint/40">Download CV</a>
     </div>
   </div>
-  <div class="h-64 md:h-80 rounded-xl bg-ink-800 border border-white/5 shadow-soft" id="heroCard"></div>
+
+  <!-- Image Container -->
+  <div class="h-full rounded-xl border border-white/5 shadow-soft overflow-hidden">
+    <img src="/static/img/landing_page_hero.jpg"
+         alt="Hero picture of Hannes"
+         class="w-full h-full object-cover"/>
+  </div>
 </section>
+
 
 <section class="mt-24 space-y-4" id="features">
   <h2 class="text-2xl font-medium">Highlights</h2>

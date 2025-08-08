@@ -1,7 +1,10 @@
-/* Tailwind v4: Basis laden */
 @import "tailwindcss";
 
-/* Dein Theme (Design-Tokens) – v4 macht das in CSS, nicht in der JS-Config */
+/* 1) Sage Tailwind, wo es nach Klassen scannen soll */
+@source "../../templates/**/*.html";
+@source "../../**/*.{html,py,js,ts,jsx,tsx}";
+
+/* 2) Definiere deine Farben als Theme-Tokens */
 @theme {
   --color-ink-900: #0b0d10;
   --color-ink-800: #12161b;
@@ -9,12 +12,16 @@
   --color-paper-100: #e6e9ef;
   --color-paper-50:  #f2f4f8;
 
-  --color-accent-mint:  #9be7c4;
-  --color-accent-peach: #ffc6a5;
-  --color-accent-sky:   #9cc9ff;
-  --color-accent-lilac: #c7b7ff;
+  --color-accent-mint:        #9be7c4;
+  --color-accent-peach:       #ffc6a5;
+  --color-accent-sky:         #9cc9ff;
+  --color-accent-lilac:       #c7b7ff;
+  --color-accent-sunorange:   #ff944d;
+  --color-accent-tomatored:   #ff6347;
+  --color-accent-forestgreen: #228b22;
+  --color-accent-softyellow:  #ffeb99;
+  --color-accent-zinnoberred: #e44d46;
+  --color-accent-ashgrey:     #a9a9a9;
+  --color-accent-magenta:     #ff00ff;
+  --color-accent-lavenderblue:#6a5acd;
 }
-
-/* (Optional) eigene Variant für class-basierten Dark-Mode – falls du dark: nutzen willst */
-@custom-variant dark (&:where(.dark *));
-
