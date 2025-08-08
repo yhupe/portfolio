@@ -1,6 +1,3 @@
-/* digital Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
-
 
 @import "tailwindcss";
 
@@ -30,6 +27,4 @@
   --color-accent-lavenderblue:#6a5acd;
 
 
-  /* echte Monospace-Variante, „digital“ anmutend */
-  --font-countdown-mono: "Share Tech Mono", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-}
+ }
